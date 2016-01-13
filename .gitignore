@@ -1,3 +1,5 @@
 *.swp
 .netrwhist
 spell/*.add.spl
+backup/
+view/
