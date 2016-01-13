@@ -4,7 +4,7 @@ and
 https://github.com/dudarev/dotvim
 
 ```bash
-git clone http://gitlab.com/sembruk/dotvim.git ~/.vim
+git clone http://github.com/sembruk/dotvim.git ~/.vim
 ln -s ~/.vim/vimrc ~/.vimrc
 cd .vim
 git submodule init
