@@ -241,6 +241,10 @@ autocmd FileType c set omnifunc=ccomplete#Complete
 set completeopt=menu
 
 
+" Pathogen
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+
 
 "------------------------------------------------------------------
 "                       НАСТРОЙКИ ГОРЯЧИХ КЛАВИШ
