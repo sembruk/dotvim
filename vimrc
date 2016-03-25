@@ -1,6 +1,6 @@
 "" ============================================================
 "" VIM configuration file
-"" Last update: 12.01.2016 20:42
+"" Last update: 25.03.2016 15:30
 "" ============================================================
 "" НАСТРОЙКИ ВНЕШНЕГО ВИДА И БАЗОВЫЕ НАСТРОЙКИ РЕДАКТОРА
 
@@ -47,8 +47,9 @@ set autoindent " ai - включить автоотступы (копирует�
 set expandtab " преобразовать табуляцию в пробелы
 set smartindent " Умные отступы (например, автоотступ после {)
 "" Для указанных типов файлов отключает замену табов пробелами и меняет ширину отступа
-au FileType crontab,fstab,make set noexpandtab tabstop=4 shiftwidth=4
-au FileType lua set tabstop=3 shiftwidth=3
+au FileType crontab,fstab,make setlocal noexpandtab tabstop=4 shiftwidth=4
+au FileType lua setlocal tabstop=3 shiftwidth=3
+au FileType javascript setlocal tabstop=4 shiftwidth=4
 
 "" Подгрузить файл синтаксиса ts.vim из ~/.vim/syntax
 au BufRead,BufNewFile *.ts set filetype=ts
