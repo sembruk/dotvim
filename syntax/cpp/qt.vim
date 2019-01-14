@@ -1365,9 +1365,24 @@ syn keyword qtClass QXmlStreamWriter
 
 " Qt Macros
 syn keyword qtAccess signals slots
-syn keyword qtMacro Q_ASSERT Q_CHECK_PTR Q_OBJECT
+syn keyword qtMacro Q_ASSERT Q_ASSERT_X Q_CHECK_PTR Q_OBJECT
 syn keyword qtMacro SIGNAL SLOT
 syn keyword qtMacro qDebug qInfo qWarning qCritical qFatal
+syn keyword qtMacro QT_DISABLE_DEPRECATED_BEFORE QT_POINTER_SIZE QT_REQUIRE_VERSION QT_TRANSLATE_NOOP3
+syn keyword qtMacro QT_TRANSLATE_NOOP QT_TRID_NOOP QT_TR_NOOP QT_VERSION QT_VERSION_CHECK QT_VERSION_STR
+syn keyword qtMacro Q_ASSUME Q_BIG_ENDIAN Q_BYTE_ORDER Q_DECLARE_TYPEINFO Q_DECL_CONSTEXPR Q_DECL_EXPORT
+syn keyword qtMacro Q_DECL_FINAL Q_DECL_IMPORT Q_DECL_NOEXCEPT Q_DECL_NOEXCEPT_EXPR Q_DECL_NOTHROW
+syn keyword qtMacro Q_DECL_OVERRIDE Q_DECL_RELAXED_CONSTEXPR Q_FOREACH Q_FOREVER Q_FORWARD_DECLARE_CF_TYPE
+syn keyword qtMacro Q_FORWARD_DECLARE_MUTABLE_CF_TYPE Q_FORWARD_DECLARE_OBJC_CLASS Q_FUNC_INFO Q_INT64_C
+syn keyword qtMacro Q_LIKELY Q_LITTLE_ENDIAN Q_OS_ANDROID Q_OS_CYGWIN Q_OS_LINUX Q_OS_MAC Q_OS_UNIX
+syn keyword qtMacro Q_OS_UNIXWARE Q_OS_WIN32 Q_OS_WIN64 Q_OS_WIN Q_UINT64_C Q_UNLIKELY Q_UNREACHABLE
+syn keyword qtMacro Q_UNUSED qMove qPrintable qUtf8Printable
+
+syn keyword qtMacro qAbs qBound qEnvironmentVariableIntValue qEnvironmentVariableIsEmpty
+syn keyword qtMacro qEnvironmentVariableIsSet qFloatDistance qFormatLogMessage qFuzzyCompare
+syn keyword qtMacro qFuzzyCompare qInf qInstallMessageHandler qIsFinite qIsInf qIsNaN qMax qMin
+syn keyword qtMacro qQNaN qRound64 qRound qSNaN qSetMessagePattern qVersion q_check_ptr qgetenv
+syn keyword qtMacro qputenv qrand qsrand qtTrId qunsetenv
 
 syn keyword qtConstant Q_NULLPTR
 
@@ -1393,7 +1408,8 @@ syn keyword qtStatement emit foreach forever
 
 " Qt Type
 syn keyword qtType qint8 quint8 qint16 quint16 qint32 quint32 qint64 quint64
-syn keyword qtType quintptr qreal
+syn keyword qtType qreal quintptr qintptr qlonglong qulonglong qptrdiff
+syn keyword qtType uchar uint ulong ushort
 
 
 " Highlight
