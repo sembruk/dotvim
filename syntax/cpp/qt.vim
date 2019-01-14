@@ -1369,6 +1369,8 @@ syn keyword qtMacro Q_ASSERT Q_CHECK_PTR Q_OBJECT
 syn keyword qtMacro SIGNAL SLOT
 syn keyword qtMacro qDebug qInfo qWarning qCritical qFatal
 
+syn keyword qtConstant Q_NULLPTR
+
 
 " Qt Enum
 " Qt
@@ -1398,6 +1400,7 @@ syn keyword qtType quintptr qreal
 highlight link qtNamespace cppConstant
 highlight link qtClass Type
 highlight link qtMacro cDefine
+highlight link qtConstant cppConstant
 highlight link qtEnumType Type
 highlight link qtEnumValue cppConstant
 highlight link qtStatement cppStatement
