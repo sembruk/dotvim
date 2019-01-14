@@ -3,7 +3,7 @@
 " Current Maintainer: kosl90  kos1990l@gmail.com
 " Description: syntax high light for Qt5.1
 " License: MIT License (http://opensource.org/licenses/MIT)
-
+" From https://github.com/kosl90/qt-highlight-vim
 
 " Qt Namespace
 syn keyword qtNamespace QAlgorithmsPrivate
@@ -1367,6 +1367,7 @@ syn keyword qtClass QXmlStreamWriter
 syn keyword qtAccess signals slots
 syn keyword qtMacro Q_ASSERT Q_CHECK_PTR Q_OBJECT
 syn keyword qtMacro SIGNAL SLOT
+syn keyword qtMacro qDebug qInfo qWarning qCritical qFatal
 
 
 " Qt Enum
@@ -1385,12 +1386,12 @@ syn keyword qtEnumValue Qt_4_3
 syn keyword qtEnumValue Open Save
 
 " Qt Statement
-syn keyword qtStatement emit
+syn keyword qtStatement emit foreach forever
 
 
 " Qt Type
 syn keyword qtType qint8 quint8 qint16 quint16 qint32 quint32 qint64 quint64
-syn keyword qtType quintptr
+syn keyword qtType quintptr qreal
 
 
 " Highlight

@@ -54,8 +54,9 @@ au FileType javascript setlocal tabstop=4 shiftwidth=4
 "" Подгрузить файл синтаксиса ts.vim из ~/.vim/syntax
 au BufRead,BufNewFile *.ts set filetype=ts
 
-"syntax on
-let c_syntax_for_h="" " необходимо установить для того, чтобы *.h файлам присваивался тип c, а не cpp
+" syntax on
+"let c_syntax_for_h=1 " необходимо установить для того, чтобы *.h файлам присваивался тип c, а не cpp
+au BufRead,BufNewFile *.h set filetype=cpp
 
 "if has('gui_running')
 "    if has('win32')
