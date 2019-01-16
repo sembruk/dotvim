@@ -380,6 +380,7 @@ syn keyword qtClass QGLPixelBuffer
 syn keyword qtClass QGLShader
 syn keyword qtClass QGLShaderProgram
 syn keyword qtClass QGLWidget
+syn keyword qtClass QOpenGLWidget
 syn keyword qtClass QGlyphRun
 syn keyword qtClass QGradient
 syn keyword qtClass QGradientStop
