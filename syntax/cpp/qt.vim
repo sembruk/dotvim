@@ -1383,7 +1383,7 @@ syn keyword qtMacro qAbs qBound qEnvironmentVariableIntValue qEnvironmentVariabl
 syn keyword qtMacro qEnvironmentVariableIsSet qFloatDistance qFormatLogMessage qFuzzyCompare
 syn keyword qtMacro qFuzzyCompare qInf qInstallMessageHandler qIsFinite qIsInf qIsNaN qMax qMin
 syn keyword qtMacro qQNaN qRound64 qRound qSNaN qSetMessagePattern qVersion q_check_ptr qgetenv
-syn keyword qtMacro qputenv qrand qsrand qtTrId qunsetenv
+syn keyword qtMacro qputenv qrand qsrand qtTrId qunsetenv QStringLiteral
 
 syn keyword qtConstant Q_NULLPTR
 
