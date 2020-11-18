@@ -7,8 +7,7 @@ https://github.com/dudarev/dotvim
 git clone http://github.com/sembruk/dotvim.git ~/.vim
 ln -s ~/.vim/vimrc ~/.vimrc
 cd .vim
-git submodule init
-git submodule update
+git submodule update --init
 ```
 
 ## Update all bundled modules
