@@ -1,6 +1,6 @@
 "" ============================================================
 "" VIM configuration file
-"" Last update: 25.03.2016 15:30
+"" Last update: 18.03.2022 21:47
 "" ============================================================
 "" НАСТРОЙКИ ВНЕШНЕГО ВИДА И БАЗОВЫЕ НАСТРОЙКИ РЕДАКТОРА
 
@@ -50,6 +50,7 @@ set smartindent " Умные отступы (например, автоотст�
 au FileType crontab,fstab,make setlocal noexpandtab tabstop=4 shiftwidth=4
 au FileType lua setlocal tabstop=3 shiftwidth=3
 au FileType javascript setlocal tabstop=4 shiftwidth=4
+au FileType html setlocal tabstop=2 shiftwidth=2
 
 "" Подгрузить файл синтаксиса ts.vim из ~/.vim/syntax
 au BufRead,BufNewFile *.ts set filetype=ts
@@ -161,8 +162,9 @@ endif
 "if has('win32')
    "set encoding=cp1251
 "else
-   set encoding=utf-8
-   set termencoding=utf-8
+set encoding=utf-8
+set termencoding=utf-8
+set fileencodings=ucs-bom,utf-8,cp1251,latin1
 "endif
 
 if has('win32')
@@ -219,6 +221,12 @@ endif
 function! UpdateCtags()
    silent !ctags -R ./
 endfunction
+
+"function! HiTabs()
+"    syntax match TAB /\t/
+"    hi TAB ctermbg=blue ctermfg=red
+"endfunction
+"au BufEnter,BufRead * call HiTabs()
 
 "" Индикация раскладки
 set keymap=russian-jcukenwin " настраиваем переключение раскладок клавиатуры по <C-^>
@@ -366,4 +374,5 @@ function! RemoveTrailingSpaces()
    execute '%s:\s\+$::ge'
    normal! 'yzt`z
 endfunction
+
 
