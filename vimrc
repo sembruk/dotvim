@@ -1,6 +1,6 @@
 "" ============================================================
 "" VIM configuration file
-"" Last update: 18.03.2022 21:47
+"" Last update: 21.02.2024 14:08
 "" ============================================================
 "" НАСТРОЙКИ ВНЕШНЕГО ВИДА И БАЗОВЫЕ НАСТРОЙКИ РЕДАКТОРА
 
@@ -13,7 +13,7 @@ if has('gui_running')
         set guifont=Liberation_Mono:h12:cRUSSIAN::
         set lines=50 columns=200
     else
-        set guifont=Mono\ 12
+        set guifont=Mono\ 14
         set lines=50 columns=188
         " Maximize gvim window
         "set lines=60 columns=200
@@ -71,9 +71,6 @@ au BufRead,BufNewFile *.h set filetype=cpp
 "set list " включить подсветку
 "set listchars=tab:>-,trail:- " установить символы, которыми будет осуществляться подсветка
 
-
-"autocmd FileType c set omnifunc=ccomplete#Complete " автодополнение ввода
-"set completeopt=menu
 set nu " нумерация строк
 au BufWinLeave *.* silent mkview " при закрытии файла сохранить 'вид'
 au BufWinEnter *.* silent loadview " при открытии - восстановить сохранённый
@@ -319,6 +316,11 @@ imap <S-right> <ESC>:tabnext<cr>i
 "nmap <C-w> :tabclose<cr>
 "imap <C-w> <ESC>:tabclose<cr>
 
+map <F5> :let g:codeium_enabled = v:true<cr>
+imap <F5> <Cmd>:let g:codeium_enabled = v:true<cr>
+map <S-F5> :let g:codeium_enabled = v:false<cr>
+imap <S-F5> <Cmd>:let g:codeium_enabled = v:false<cr>
+
 nnoremap ,cd :cd %:p:h<cr>:pwd<cr>
 
 "" Меню изменения кодировок чтения из файла (<F8>)
@@ -348,8 +350,7 @@ menu File.Format.UNIX   :set fileformat=unix<CR>
 map <S-F8> :emenu File.Format.<TAB>
 
 "" Проверка орфографии
-set spell spelllang=
-set nospell
+set spell spelllang=ru,en_us
 menu Spell.off :setlocal spell spelllang=<CR>:setlocal nospell<CR>
 menu Spell.Russian+English :setlocal spell spelllang=ru,en_us<CR>
 menu Spell.Russian :setlocal spell spelllang=ru<CR>
@@ -375,4 +376,17 @@ function! RemoveTrailingSpaces()
    normal! 'yzt`z
 endfunction
 
+
+"" Codeium (https://github.com/Exafunction/codeium.vim)
+"" Disable the automatic triggering of completions
+"let g:codeium_manual = v:true
+let g:codeium_disable_bindings = 1
+"let g:codeium_enabled= v:false
+
+imap <script><silent><nowait><expr> <S-Tab> codeium#Accept()
+"" Alt + ]
+imap <M-]>   <Cmd>call codeium#CycleCompletions(1)<CR>
+"" Alt + [
+imap <M-[>   <Cmd>call codeium#CycleCompletions(-1)<CR>
+imap <M-x>   <Cmd>call codeium#Clear()<CR>
 
