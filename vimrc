@@ -1,6 +1,6 @@
 "" ============================================================
 "" VIM configuration file
-"" Last update: 21.02.2024 14:08
+"" Last update: 21.02.2024 16:37
 "" ============================================================
 "" НАСТРОЙКИ ВНЕШНЕГО ВИДА И БАЗОВЫЕ НАСТРОЙКИ РЕДАКТОРА
 
@@ -300,7 +300,7 @@ vmap <C-Left> <esc>:bp<cr>i
 
 " следующий буфер
 nmap <C-Right> :bn<cr>
-imap <C-Right> <esc>:bn<cr>i
+"imap <C-Right> <esc>:bn<cr>i
 vmap <C-Right> <esc>:bn<cr>i
 
 
@@ -383,7 +383,7 @@ endfunction
 let g:codeium_disable_bindings = 1
 "let g:codeium_enabled= v:false
 
-imap <script><silent><nowait><expr> <S-Tab> codeium#Accept()
+imap <script><silent><nowait><expr> <C-l> codeium#Accept()
 "" Alt + ]
 imap <M-]>   <Cmd>call codeium#CycleCompletions(1)<CR>
 "" Alt + [
